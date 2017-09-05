@@ -9,11 +9,14 @@ clientSocket.send(sentence1)
 responseMessage = clientSocket.recv(1024)
 print 'From Server, response 1:', responseMessage
 
-sentence2 = '1111111111'
-for i in range(2):
-    sentence2 += sentence2
-# print sentence2
+sentence2 = '11111111111111111111'
 clientSocket.send(sentence2)
 responseMessage = clientSocket.recv(1024)
 print 'From Server, response 2:', responseMessage
+
+# sentence3 = '1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111'
+# clientSocket.send(sentence3)
+# responseMessage = clientSocket.recv(1024)
+# print 'From Server, response 3:', responseMessage
+
 clientSocket.close()
